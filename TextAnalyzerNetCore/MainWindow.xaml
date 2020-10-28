@@ -1,0 +1,63 @@
+﻿<Window x:Class="TextAnalyzerNetCore.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TextAnalyzerNetCore"
+        mc:Ignorable="d"
+        Title="Text Analyzer" MinHeight="225" MinWidth="300" MaxHeight="225" MaxWidth="300">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <GroupBox
+            Header="Load text file"
+            Grid.Row="0"
+            Margin="5">
+            <StackPanel>
+                <Button
+                    Name="btnOpenFile"
+                    Click="btnOpenFile_Click"
+                    Content="Open file"
+                    ToolTip="Loads .txt files only"
+                    Width="100"
+                    Margin="5">
+                </Button>
+
+                <TextBox
+                    Name="tbStatusOfTextFile"
+                    Width="250"
+                    Margin="5"
+                    TextAlignment="Center">
+                </TextBox>
+            </StackPanel>
+        </GroupBox>
+
+        <Button
+            Grid.Row="1"
+            Name="btnConvert"
+            Click="btnConvert_Click"
+            Content="Convert"
+            Width="60"
+            Margin="5">
+        </Button>
+        <GroupBox
+            Header="Save data as .csv"
+            Grid.Row="2"
+            Margin="5">
+            <Button
+                Name="btnSaveFile"
+                Click="btnSaveFile_Click"
+                Content="Save file"
+                Width="100"
+                Margin="5"
+                ></Button>
+        </GroupBox>
+    </Grid>
+</Window>
